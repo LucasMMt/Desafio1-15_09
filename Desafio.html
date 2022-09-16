@@ -97,7 +97,7 @@
             document.getElementById('txtEmail',).value +
             document.getElementById('txtSenha',).value +
             document.getElementById('txtSenha2',).value
-submitted()
+submitted()  
             ">
                 <span>Enviar</span>
             </button>
@@ -105,9 +105,22 @@ submitted()
             <script>
 const container = document.querySelector('.container');
 function submitted() {
+    var nome = document.getElementById("txtNome");
+    var cpf = document.getElementById("txtCPF");
+    var Idade = document.getElementById("txtIdade");
+    var Telefone = document.getElementById("txtTelefone");
+    var data = document.getElementById("txtDataNasc");
+    var email = document.getElementById("txtEmail");
+    var senha = document.getElementById("txtSenha");
+    var senha2 = document.getElementById("txtSenha2");
+
+    if (nome.value == '' && cpf.value == '' && Idade.value == '' && Telefone.value == '' && data.value == '' && email.value == '' && senha.value == '' && senha2.value == '') {
+        document.getElementById('txtResultado').value = 'Um ou mais Campos nao foram preenchidos'
+    } else {
         container.innerHTML = `<i class="fa-regular fa-circle-check"></i><br>
         Formulario Enviado!`
-  }
+        }
+    }
             </script>    
 </body> 
 </html> 
