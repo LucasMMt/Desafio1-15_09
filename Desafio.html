@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Formulario</title>
+</head>
+<body>
+
+    <div class= "container">
+    <div class="row">
+            <div class="col-2">
+                <label>Nome</label>
+            </div>
+                <input id="txtNome" type="text" required>
+                </div>
+
+    <div class="row">
+            <div class="col-2">
+                <label>CPF</label>
+            </div>
+            <input id="txtCPF" type="text" required>
+    </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label>Idade</label>
+                </div>
+            <input id="txtIdade" type="text" required>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label>Telefone</label>
+                </div>
+            <input id="txtTelefone" type="text" required>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label>Data de Nascimento</label>
+                </div>
+            <input id="txtDataNasc" type="text" required>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label>E-mail</label>
+                </div>
+            <input id="txtEmail" type="text" required>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label>Senha</label>
+                </div>
+            <input id="txtSenha" type="text" required>
+            </div>
+
+            <div class="row">
+                <div class="col-2">
+                    <label>Digite a Senha Novamente</label>
+                </div>
+            <input id="txtSenha2" type="text" required>
+            </div>
+        </div>
+
+
+            <div class="row">
+            <textarea cols='45'
+            rows='7'
+            id="txtResultado" 
+            type="text" disabled>
+            </textarea>
+       
+        </div>
+            <button onclick="
+            document.getElementById('txtNome',).value = ''
+            document.getElementById('txtCPF',).value = ''
+            document.getElementById('txtIdade',).value = ''
+            document.getElementById('txtTelefone',).value = ''
+            document.getElementById('txtDataNasc',).value = ''
+            document.getElementById('txtEmail',).value = ''
+            document.getElementById('txtSenha',).value = ''
+            document.getElementById('txtSenha2',).value = ''
+            ">
+                <span>Apagar</span>
+            </button>
+
+            
+            <button onclick="
+            document.getElementById('txtResultado').value =             
+            document.getElementById('txtNome',).value +
+            document.getElementById('txtCPF',).value +
+            document.getElementById('txtIdade',).value +
+            document.getElementById('txtTelefone',).value +
+            document.getElementById('txtDataNasc',).value +
+            document.getElementById('txtEmail',).value +
+            document.getElementById('txtSenha',).value +
+            document.getElementById('txtSenha2',).value
+submitted()
+            ">
+                <span>Enviar</span>
+            </button>
+
+            <script>
+const container = document.querySelector('.container');
+function submitted() {
+        container.innerHTML = `<i class="fa-regular fa-circle-check"></i><br>
+        Formulario Enviado!`
+  }
+            </script>    
+</body> 
+</html> 
